@@ -7,5 +7,11 @@ tiktoken>=0.8.0
 # 文本处理
 regex>=2024.5.15
 tqdm>=4.66.0
+# 音阶段：词组读音数据源（MIT）
+pypinyin>=0.51.0
+# 音阶段：发声挂件后端（GPL-3.0，联网）
+edge-tts>=7.0.0
+# 语料工具：维基 parquet 解析
+pyarrow>=15.0.0
 # 测试
 pytest>=8.0.0

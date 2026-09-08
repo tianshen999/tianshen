@@ -1,13 +1,29 @@
-// 天神 v0.1 GitHub 自动发布脚本
-// 用法: node tools/publish_github.js [--dry-run]
+// 天神 GitHub 自动发布脚本（支持多版本）
+// 用法: node tools/publish_github.js [--dry-run] [--tag v0.2] [--dir release/tianshen-v0.2] [--zip release/tianshen-v0.2.zip]
 // 需要环境变量 GH_TOKEN（GitHub Personal Access Token，仅 repo 权限）
 const fs = require('fs');
 const path = require('path');
 
-const RELEASE_DIR = 'release/tianshen-v0.1';
-const ZIP_PATH = 'release/tianshen-v0.1.zip';
+function argAfter(flag, def) {
+  const i = process.argv.indexOf(flag);
+  return i >= 0 ? process.argv[i + 1] : def;
+}
+const RELEASE_DIR = argAfter('--dir', 'release/tianshen-v0.2');
+const ZIP_PATH = argAfter('--zip', 'release/tianshen-v0.2.zip');
+const TAG = argAfter('--tag', 'v0.2');
 const REPO_NAME = 'tianshen';
 const API = 'https://api.github.com';
+
+const RELEASE_META = {
+  'v0.1': {
+    name: '天神 v0.1：中文原生分词器（形）',
+    body: '天神 v0.1：中文原生分词器（GPL-3.0）。\n\n- 64k 词表：token/字 0.938 反超 Qwen/GPT-4o，bits/字全场第一，整字保持率 1.0\n- 可切断拉丁挂件（默认关闭）\n- 完整复现指南见 RELEASE.md',
+  },
+  'v0.2': {
+    name: '天神 v0.2：形+音合并词表',
+    body: '天神 v0.2：形+音（GPL-3.0）。\n\n- 拼音数据层：GB2312 常用字 100% 覆盖，多音字 8,537 个\n- 64k 词表词级拼音标注（39,594 词，四级消歧流水线）\n- 多音消歧评测：天神 100% vs pypinyin 95.1%（185 词公开测试集）\n- 注音输出挂件 + 字/词级发声挂件（默认关闭）\n- 繁体同步标注 76,839 词条\n- 复现指南见 RELEASE.md',
+  },
+};
 
 function walk(dir, base = '') {
   const out = [];
@@ -70,10 +86,31 @@ async function main() {
     console.log(`仓库已创建: ${owner}/${REPO_NAME}`);
   } catch (e) {
     if (e.status === 422) console.log(`仓库已存在: ${owner}/${REPO_NAME}`);
-    else throw e;
+    else if (e.status === 403) {
+      console.error('令牌权限不足：创建仓库需要 Administration 权限，');
+      console.error('或改用 classic 令牌并勾选 repo（参见 docs/06-发布指南.md 方案 C）。');
+      throw e;
+    } else throw e;
   }
 
-  // 3. 逐个文件创建 blob
+  // 3. 空仓库引导：GitHub 不允许在完全空的仓库上建 blob，
+  //    先用 Contents API 种一个初始提交，获得 main 分支的父提交。
+  let parent = null;
+  try {
+    const ref = await api(token, 'GET', `/repos/${owner}/${REPO_NAME}/git/refs/heads/main`);
+    parent = ref.object.sha;
+    console.log('main 分支已存在，父提交:', parent.slice(0, 7));
+  } catch {
+    await api(token, 'PUT', `/repos/${owner}/${REPO_NAME}/contents/README.md`, {
+      message: 'initial commit',
+      content: Buffer.from('# tianshen\n').toString('base64'),
+    });
+    const ref2 = await api(token, 'GET', `/repos/${owner}/${REPO_NAME}/git/refs/heads/main`);
+    parent = ref2.object.sha;
+    console.log('已创建引导提交:', parent.slice(0, 7));
+  }
+
+  // 4. 逐个文件创建 blob
   console.log('上传文件中...');
   const tree = [];
   for (const rel of files) {
@@ -87,34 +124,27 @@ async function main() {
   }
   console.log('');
 
-  // 4. 建树 + 提交 + 指向 main 分支
+  // 5. 建树 + 提交 + 更新 main 分支
   const t = await api(token, 'POST', `/repos/${owner}/${REPO_NAME}/git/trees`, { tree });
-  let parent = null;
-  try {
-    const ref = await api(token, 'GET', `/repos/${owner}/${REPO_NAME}/git/refs/heads/main`);
-    parent = ref.object.sha;
-  } catch { /* main 不存在，从空仓库开始 */ }
   const c = await api(token, 'POST', `/repos/${owner}/${REPO_NAME}/git/commits`, {
-    message: '天神 v0.1：中文原生分词器（GPL-3.0）',
+    message: `天神 ${TAG}：中文原生词表（GPL-3.0）`,
     tree: t.sha,
-    ...(parent ? { parents: [parent] } : {}),
+    parents: [parent],
   });
-  if (parent) {
-    await api(token, 'PATCH', `/repos/${owner}/${REPO_NAME}/git/refs/heads/main`, { sha: c.sha });
-  } else {
-    await api(token, 'POST', `/repos/${owner}/${REPO_NAME}/git/refs`, { ref: 'refs/heads/main', sha: c.sha });
-  }
+  await api(token, 'PATCH', `/repos/${owner}/${REPO_NAME}/git/refs/heads/main`, { sha: c.sha });
   console.log('代码已推送至 main 分支');
 
-  // 5. 发布 v0.1 release + zip 附件
+  // 6. 发布 release + zip 附件
+  const meta = RELEASE_META[TAG] || { name: `天神 ${TAG}`, body: `天神 ${TAG}（GPL-3.0）。` };
   const rel = await api(token, 'POST', `/repos/${owner}/${REPO_NAME}/releases`, {
-    tag_name: 'v0.1',
-    name: '天神 v0.1',
-    body: '天神 v0.1：中文原生分词器（GPL-3.0）。\n\n- 64k 词表：token/字 0.938 反超 Qwen/GPT-4o，bits/字全场第一，整字保持率 1.0\n- 可切断拉丁挂件（默认关闭）\n- 完整复现指南见 RELEASE.md',
+    tag_name: TAG,
+    name: meta.name,
+    body: meta.body,
   });
   const zipBody = fs.readFileSync(ZIP_PATH);
+  const zipName = path.basename(ZIP_PATH);
   const up = await fetch(
-    `https://uploads.github.com/repos/${owner}/${REPO_NAME}/releases/${rel.id}/assets?name=tianshen-v0.1.zip`,
+    `https://uploads.github.com/repos/${owner}/${REPO_NAME}/releases/${rel.id}/assets?name=${zipName}`,
     {
       method: 'POST',
       headers: {
@@ -126,7 +156,7 @@ async function main() {
     }
   );
   if (!up.ok) throw new Error(`zip 上传失败: ${up.status} ${await up.text()}`);
-  console.log(`\n✅ 发布完成: https://github.com/${owner}/${REPO_NAME}`);
+  console.log(`\n✅ 发布完成: https://github.com/${owner}/${REPO_NAME}/releases/tag/${TAG}`);
   console.log('   建议：发布完成后立即吊销该令牌（GitHub → Settings → Developer settings → Tokens）。');
 }
 

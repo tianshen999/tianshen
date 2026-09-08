@@ -11,6 +11,15 @@
 | 中文维基百科 20231101 版（3 个 parquet 分片） | wikimedia/wikipedia（经 hf-mirror.com 镜像下载） | CC BY-SA 4.0 | 词表为统计派生数据；如再发布维基原文需遵守相同许可并署名 |
 | 公版英文经典（Pride and Prejudice 等 4 部） | Project Gutenberg | 公有领域 | 挂件词表训练语料，tools/fetch_english.py |
 
+## 音阶段数据（v0.2 新增）
+
+| 数据 | 来源 | 许可证 | 说明 |
+|---|---|---|---|
+| CC-CEDICT（12.5 万词条词-音词典） | mdbg.net | CC BY-SA 4.0（与 GPL-3.0 单向兼容） | 本包在 GPL-3.0 下再发布，文件 data/cedict_ts.u8 |
+| pypinyin 词组读音（第二数据源） | python-pinyin 项目 | MIT | 运行时调用（依赖安装），词表 JSON 中 source=pypinyin 的条目 |
+| edge-tts（发声挂件后端） | edge-tts 项目 | GPL-3.0 | 联网调用微软语音服务；挂件默认关闭 |
+| Unihan 拼音字段（kHanyuPinyin/kMandarin/kXHC1983） | unicode.org | Unicode License v3 | 与字形数据同一文件 |
+
 ## 字形数据
 
 | 数据 | 来源 | 许可证 |
