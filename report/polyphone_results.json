@@ -1,0 +1,7 @@
+{
+ "n": 185,
+ "ours_correct": 185,
+ "ours_accuracy": 1.0,
+ "pypinyin_correct": 176,
+ "pypinyin_accuracy": 0.9513513513513514
+}

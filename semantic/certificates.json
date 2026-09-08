@@ -1,0 +1,566 @@
+[
+ {
+  "plane": "F(形)·原始",
+  "n_vectors": 12468,
+  "dim_nominal": 823,
+  "rank_measured": 822,
+  "participation_ratio": 23.51,
+  "effective_rank": 77.76,
+  "rank_criterion": true,
+  "pr_criterion": false,
+  "pr_null_baseline": {
+   "pr_null_mean": 23.09,
+   "pr_null_std": 0.03,
+   "pr_null_values": [
+    23.12,
+    23.07,
+    23.04,
+    23.09,
+    23.14
+   ]
+  },
+  "pr_z_score": 14.0,
+  "verdict": "CONCENTRATED 谱集中（满秩但能量幂律分布）",
+  "anisotropy": 0.3423,
+  "top20_eigenvalues": [
+   1908.22,
+   689.87,
+   369.27,
+   309.57,
+   277.72,
+   206.28,
+   198.06,
+   196.32,
+   181.06,
+   168.54,
+   147.96,
+   141.6,
+   133.51,
+   130.41,
+   126.94,
+   120.23,
+   113.44,
+   109.77,
+   108.01,
+   101.13
+  ],
+  "cumulative_energy_top5": 0.3288,
+  "twonn": {
+   "id": 1.5,
+   "n_after_dedup": 12098
+  },
+  "independence": {
+   "rho_max": 0.0001,
+   "r2_F_explains_P": 0.0251,
+   "k": 72.0
+  },
+  "structure_budget": {
+   "achievable": 823,
+   "per_block": [
+    214,
+    596,
+    12,
+    1
+   ],
+   "nominal_blocks": 823,
+   "n_blocks": 4,
+   "block_sizes": [
+    214,
+    596,
+    12,
+    1
+   ],
+   "auto_detected": false
+  },
+  "rank_vs_achievable": 0.9988,
+  "achievable_criterion": true,
+  "phonetic_mi": {
+   "n_components_evaluated": 451,
+   "mean_mi_initial": 0.0028,
+   "mean_mi_final": 0.004,
+   "top_components": [
+    {
+     "component": "𦈢",
+     "n_chars": 3,
+     "dominant_initial": "s",
+     "lift": 43.59,
+     "examples": [
+      "唢",
+      "琐",
+      "锁"
+     ],
+     "mi_initial": 0.0009,
+     "mi_final": 0.0009
+    },
+    {
+     "component": "冗",
+     "n_chars": 3,
+     "dominant_initial": "n",
+     "lift": 43.14,
+     "examples": [
+      "寜",
+      "橣",
+      "甯"
+     ],
+     "mi_initial": 0.0009,
+     "mi_final": 0.0008
+    },
+    {
+     "component": "夨",
+     "n_chars": 5,
+     "dominant_initial": "c",
+     "lift": 41.22,
+     "examples": [
+      "澯",
+      "瀣",
+      "璨",
+      "粲",
+      "餐"
+     ],
+     "mi_initial": 0.0013,
+     "mi_final": 0.0011
+    },
+    {
+     "component": "𦥔",
+     "n_chars": 16,
+     "dominant_initial": "s",
+     "lift": 40.87,
+     "examples": [
+      "叟",
+      "嗖",
+      "嫂",
+      "廋",
+      "搜"
+     ],
+     "mi_initial": 0.0045,
+     "mi_final": 0.0044
+    },
+    {
+     "component": "弗",
+     "n_chars": 19,
+     "dominant_initial": "f",
+     "lift": 35.62,
+     "examples": [
+      "佛",
+      "刜",
+      "咈",
+      "岪",
+      "彿"
+     ],
+     "mi_initial": 0.0055,
+     "mi_final": 0.0034
+    },
+    {
+     "component": "互",
+     "n_chars": 3,
+     "dominant_initial": "p",
+     "lift": 34.16,
+     "examples": [
+      "佩",
+      "姵",
+      "珮"
+     ],
+     "mi_initial": 0.0009,
+     "mi_final": 0.001
+    },
+    {
+     "component": "义",
+     "n_chars": 4,
+     "dominant_initial": "r",
+     "lift": 32.64,
+     "examples": [
+      "仭",
+      "劔",
+      "釼",
+      "靱"
+     ],
+     "mi_initial": 0.0009,
+     "mi_final": 0.0009
+    },
+    {
+     "component": "𪧇",
+     "n_chars": 4,
+     "dominant_initial": "z",
+     "lift": 32.24,
+     "examples": [
+      "㯶",
+      "儍",
+      "糭",
+      "鑁"
+     ],
+     "mi_initial": 0.001,
+     "mi_final": 0.001
+    },
+    {
+     "component": "𡱒",
+     "n_chars": 4,
+     "dominant_initial": "z",
+     "lift": 32.24,
+     "examples": [
+      "姊",
+      "泲",
+      "秭",
+      "笫"
+     ],
+     "mi_initial": 0.0009,
+     "mi_final": 0.0008
+    },
+    {
+     "component": "丑",
+     "n_chars": 11,
+     "dominant_initial": "n",
+     "lift": 31.38,
+     "examples": [
+      "妞",
+      "峱",
+      "忸",
+      "扭",
+      "杻"
+     ],
+     "mi_initial": 0.0025,
+     "mi_final": 0.0027
+    },
+    {
+     "component": "朿",
+     "n_chars": 14,
+     "dominant_initial": "c",
+     "lift": 29.44,
+     "examples": [
+      "僰",
+      "刺",
+      "拺",
+      "敇",
+      "枣"
+     ],
+     "mi_initial": 0.0027,
+     "mi_final": 0.0022
+    },
+    {
+     "component": "串",
+     "n_chars": 7,
+     "dominant_initial": "c",
+     "lift": 29.44,
+     "examples": [
+      "患",
+      "撺",
+      "槵",
+      "漶",
+      "窜"
+     ],
+     "mi_initial": 0.0016,
+     "mi_final": 0.002
+    },
+    {
+     "component": "平",
+     "n_chars": 14,
+     "dominant_initial": "p",
+     "lift": 29.28,
+     "examples": [
+      "䶄",
+      "伻",
+      "坪",
+      "怦",
+      "抨"
+     ],
+     "mi_initial": 0.0033,
+     "mi_final": 0.0031
+    },
+    {
+     "component": "𭥍",
+     "n_chars": 10,
+     "dominant_initial": "f",
+     "lift": 28.5,
+     "examples": [
+      "㙏",
+      "复",
+      "履",
+      "愎",
+      "椱"
+     ],
+     "mi_initial": 0.0023,
+     "mi_final": 0.0015
+    },
+    {
+     "component": "𠀐",
+     "n_chars": 13,
+     "dominant_initial": "k",
+     "lift": 26.56,
+     "examples": [
+      "䙌",
+      "匮",
+      "墤",
+      "愦",
+      "溃"
+     ],
+     "mi_initial": 0.0026,
+     "mi_final": 0.0031
+    }
+   ]
+  }
+ },
+ {
+  "plane": "F(形)·IDF加权",
+  "n_vectors": 12468,
+  "dim_nominal": 823,
+  "rank_measured": 822,
+  "participation_ratio": 93.18,
+  "effective_rank": 139.93,
+  "rank_criterion": true,
+  "pr_criterion": false,
+  "pr_null_baseline": {
+   "pr_null_mean": 113.34,
+   "pr_null_std": 0.09,
+   "pr_null_values": [
+    113.44,
+    113.36,
+    113.41,
+    113.28,
+    113.2
+   ]
+  },
+  "pr_z_score": -224.0,
+  "verdict": "CONCENTRATED 谱集中（满秩但能量幂律分布）",
+  "anisotropy": 0.1671,
+  "top20_eigenvalues": [
+   446.29,
+   277.92,
+   254.26,
+   243.95,
+   208.06,
+   183.96,
+   175.9,
+   159.89,
+   141.62,
+   139.8,
+   134.95,
+   130.29,
+   129.26,
+   126.7,
+   120.8,
+   117.27,
+   112.88,
+   105.85,
+   101.42,
+   98.6
+  ],
+  "cumulative_energy_top5": 0.1484,
+  "twonn": {
+   "id": 1.09,
+   "n_after_dedup": 12098
+  },
+  "structure_budget": {
+   "achievable": 823,
+   "per_block": [
+    214,
+    596,
+    12,
+    1
+   ],
+   "nominal_blocks": 823,
+   "n_blocks": 4,
+   "block_sizes": [
+    214,
+    596,
+    12,
+    1
+   ],
+   "auto_detected": false
+  },
+  "rank_vs_achievable": 0.9988,
+  "achievable_criterion": true
+ },
+ {
+  "plane": "P(音)·原始",
+  "n_vectors": 12468,
+  "dim_nominal": 73,
+  "rank_measured": 69,
+  "participation_ratio": 19.78,
+  "effective_rank": 34.39,
+  "rank_criterion": true,
+  "pr_criterion": false,
+  "pr_null_baseline": {
+   "pr_null_mean": 17.94,
+   "pr_null_std": 0.04,
+   "pr_null_values": [
+    17.9,
+    18.02,
+    17.91,
+    17.92,
+    17.95
+   ]
+  },
+  "pr_z_score": 46.0,
+  "verdict": "CONCENTRATED 谱集中（满秩但能量幂律分布）",
+  "anisotropy": 0.365,
+  "top20_eigenvalues": [
+   1838.38,
+   1060.63,
+   940.59,
+   650.06,
+   530.09,
+   420.58,
+   356.27,
+   309.28,
+   274.67,
+   260.01,
+   239.94,
+   225.13,
+   206.67,
+   202.05,
+   196.71,
+   185.23,
+   175.25,
+   172.62,
+   168.23,
+   163.22
+  ],
+  "cumulative_energy_top5": 0.4152,
+  "twonn": {
+   "id": 1.82,
+   "n_after_dedup": 4320
+  },
+  "structure_budget": {
+   "achievable": 71,
+   "per_block": [
+    22,
+    43,
+    6
+   ],
+   "nominal_blocks": 73,
+   "n_blocks": 3,
+   "block_sizes": [
+    23,
+    44,
+    6
+   ],
+   "auto_detected": false
+  },
+  "rank_vs_achievable": 0.9718,
+  "achievable_criterion": true
+ },
+ {
+  "plane": "P(音)·IDF加权",
+  "n_vectors": 12468,
+  "dim_nominal": 73,
+  "rank_measured": 71,
+  "participation_ratio": 38.14,
+  "effective_rank": 49.2,
+  "rank_criterion": true,
+  "pr_criterion": false,
+  "pr_null_baseline": {
+   "pr_null_mean": 38.07,
+   "pr_null_std": 0.03,
+   "pr_null_values": [
+    38.09,
+    38.04,
+    38.11,
+    38.07,
+    38.02
+   ]
+  },
+  "pr_z_score": 2.2,
+  "verdict": "CONCENTRATED 谱集中（满秩但能量幂律分布）",
+  "anisotropy": 0.279,
+  "top20_eigenvalues": [
+   1083.37,
+   476.05,
+   437.88,
+   420.73,
+   402.77,
+   376.49,
+   341.85,
+   321.49,
+   301.69,
+   297.73,
+   284.17,
+   279.24,
+   260.6,
+   249.39,
+   247.57,
+   228.67,
+   220.31,
+   218.54,
+   216.73,
+   209.24
+  ],
+  "cumulative_energy_top5": 0.2333,
+  "twonn": {
+   "id": 1.83,
+   "n_after_dedup": 4320
+  },
+  "structure_budget": {
+   "achievable": 71,
+   "per_block": [
+    22,
+    43,
+    6
+   ],
+   "nominal_blocks": 73,
+   "n_blocks": 3,
+   "block_sizes": [
+    23,
+    44,
+    6
+   ],
+   "auto_detected": false
+  },
+  "rank_vs_achievable": 1.0,
+  "achievable_criterion": true
+ },
+ {
+  "plane": "W(F⊕P)·原始",
+  "n_vectors": 12468,
+  "dim_nominal": 896,
+  "rank_measured": 891,
+  "participation_ratio": 28.75,
+  "effective_rank": 81.92,
+  "rank_criterion": true,
+  "pr_criterion": false,
+  "pr_null_baseline": {
+   "pr_null_mean": 26.89,
+   "pr_null_std": 0.04,
+   "pr_null_values": [
+    26.93,
+    26.86,
+    26.82,
+    26.9,
+    26.93
+   ]
+  },
+  "pr_z_score": 46.5,
+  "verdict": "CONCENTRATED 谱集中（满秩但能量幂律分布）",
+  "anisotropy": 0.3545,
+  "top20_eigenvalues": [
+   1713.91,
+   549.96,
+   481.23,
+   417.34,
+   329.59,
+   274.72,
+   212.73,
+   193.86,
+   183.88,
+   161.05,
+   156.36,
+   146.09,
+   140.45,
+   133.28,
+   123.72,
+   115.85,
+   113.79,
+   106.48,
+   103.81,
+   102.61
+  ],
+  "cumulative_energy_top5": 0.3105,
+  "twonn": {
+   "id": 3.02,
+   "n_after_dedup": 12392
+  },
+  "concat": {
+   "pr_sum_of_planes": 43.29,
+   "pr_concat": 28.75,
+   "deviation_pct": 33.6
+  }
+ }
+]

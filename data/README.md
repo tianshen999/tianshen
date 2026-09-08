@@ -20,6 +20,14 @@
 | edge-tts（发声挂件后端） | edge-tts 项目 | GPL-3.0 | 联网调用微软语音服务；挂件默认关闭 |
 | Unihan 拼音字段（kHanyuPinyin/kMandarin/kXHC1983） | unicode.org | Unicode License v3 | 与字形数据同一文件 |
 
+## 意阶段数据（v0.3 新增）
+
+| 数据 | 来源 | 许可证 | 说明 |
+|---|---|---|---|
+| 中文维基词典 dump（zhwiktionary） | dumps.wikimedia.org | CC BY-SA 4.0（与 GPL-3.0 单向兼容） | 字/词中文释义，tools/parse_wiktionary.py 解析；释义关键词袋由此派生 |
+| 214 部首义素表 | 本项目人工策管 | GPL-3.0 | src/semantic/radical_semantics.py，含 13 条 🟡 待校条目（开源策管） |
+| 义近探针评测集（36 探针） | 本项目人工策管 | GPL-3.0 | eval/semantic_bench.py |
+
 ## 字形数据
 
 | 数据 | 来源 | 许可证 |

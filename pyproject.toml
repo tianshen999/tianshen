@@ -1,7 +1,7 @@
 [project]
 name = "tianshen-tokenizer"
-version = "0.2.0"
-description = "天神（Tianshen）：中文原生分词器——形（字形/词表）+ 音（拼音/注音/发声），中文第一公民 + 汉字原子性（GPL-3.0 开源）"
+version = "0.3.0"
+description = "天神（Tianshen）：中文原生词空间——形（字形/词表）+ 音（拼音/注音/发声）+ 意（义素/深义），真三维 F⊕P⊕S（GPL-3.0 开源）"
 requires-python = ">=3.10"
 dependencies = [
     "sentencepiece>=0.2.0",

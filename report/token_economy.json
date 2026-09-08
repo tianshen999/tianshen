@@ -1,0 +1,77 @@
+{
+ "n_chars": 141102,
+ "rows": [
+  {
+   "tokenizer": "天神·64k",
+   "base_tokens": 107536,
+   "tokens_per_char": 0.762,
+   "pinyin_injection_tokens": 0,
+   "zhuyin_injection_tokens": 555177,
+   "total_with_pinyin": 107536,
+   "note": "音/形/意信息由词表外部查表提供，注入 token = 0",
+   "cost_1M_chars_base": 1.52,
+   "cost_1M_chars_with_pinyin": 1.52
+  },
+  {
+   "tokenizer": "gpt-4o (o200k_base)",
+   "base_tokens": 152186,
+   "tokens_per_char": 1.079,
+   "pinyin_injection_tokens": 299180,
+   "zhuyin_injection_tokens": 828150,
+   "total_with_pinyin": 451366,
+   "cost_1M_chars_base": 19.41,
+   "cost_1M_chars_with_pinyin": 57.58
+  },
+  {
+   "tokenizer": "gpt-3.5 (cl100k_base)",
+   "base_tokens": 226072,
+   "tokens_per_char": 1.602,
+   "pinyin_injection_tokens": 336259,
+   "zhuyin_injection_tokens": 1272584,
+   "total_with_pinyin": 562331,
+   "cost_1M_chars_base": 5.77,
+   "cost_1M_chars_with_pinyin": 14.35
+  },
+  {
+   "tokenizer": "Qwen2.5-7B",
+   "base_tokens": 133085,
+   "tokens_per_char": 0.943,
+   "pinyin_injection_tokens": 306640,
+   "zhuyin_injection_tokens": 683556,
+   "total_with_pinyin": 439725,
+   "cost_1M_chars_base": 0.75,
+   "cost_1M_chars_with_pinyin": 2.49
+  },
+  {
+   "tokenizer": "DeepSeek-V3",
+   "base_tokens": 119801,
+   "tokens_per_char": 0.849,
+   "pinyin_injection_tokens": 289582,
+   "zhuyin_injection_tokens": 799995,
+   "total_with_pinyin": 409383,
+   "cost_1M_chars_base": 1.7,
+   "cost_1M_chars_with_pinyin": 5.8
+  },
+  {
+   "tokenizer": "Yi-6B",
+   "base_tokens": 137152,
+   "tokens_per_char": 0.972,
+   "pinyin_injection_tokens": 406307,
+   "zhuyin_injection_tokens": 1272584,
+   "total_with_pinyin": 543459,
+   "cost_1M_chars_base": 0.97,
+   "cost_1M_chars_with_pinyin": 3.85
+  },
+  {
+   "tokenizer": "ChatGLM3-6B",
+   "base_tokens": 126054,
+   "tokens_per_char": 0.893,
+   "pinyin_injection_tokens": 358361,
+   "zhuyin_injection_tokens": 948271,
+   "total_with_pinyin": 484415,
+   "cost_1M_chars_base": 0.45,
+   "cost_1M_chars_with_pinyin": 1.72
+  }
+ ],
+ "price_notes": "公开价约数，2026 初估算，仅量级参考"
+}

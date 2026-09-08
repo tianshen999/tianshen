@@ -244,6 +244,15 @@ def main() -> int:
             print(f"{word:<6} {correct:<16} {ours:<16} {theirs:<16} {'✓' if og else '✗':<5} {'✓' if tg else '✗'}")
     print(f"\n天神  准确率: {ours_ok}/{n} = {ours_ok/n:.1%}")
     print(f"pypinyin 准确率: {theirs_ok}/{n} = {theirs_ok/n:.1%}")
+
+    # 闸门数据（ADR-029）
+    import json as _json
+    out = ROOT / "artifacts" / "polyphone_results.json"
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(_json.dumps(
+        {"n": n, "ours_correct": ours_ok, "ours_accuracy": ours_ok / n,
+         "pypinyin_correct": theirs_ok, "pypinyin_accuracy": theirs_ok / n},
+        ensure_ascii=False, indent=1), encoding="utf-8")
     return 0
 
 
