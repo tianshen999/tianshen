@@ -1,0 +1,1 @@
+我们使用大语言模型 LLM 进行自然语言处理 NLP 研究，模型基于 Transformer 架构，训练过程需要大量 GPU 算力。代码示例：python train.py --batch-size 32 --lr 1e-4。评估指标包括 BLEU、ROUGE 与 perplexity。团队每周进行一次 code review，并将成果发布到 GitHub。

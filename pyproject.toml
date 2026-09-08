@@ -1,0 +1,20 @@
+[project]
+name = "tianshen-tokenizer"
+version = "0.1.0"
+description = "天神（Tianshen）：中文原生分词器——中文第一公民 + 汉字原子性 + 字形通道显式设计（GPL-3.0 开源）"
+requires-python = ">=3.10"
+dependencies = [
+    "sentencepiece>=0.2.0",
+    "tokenizers>=0.20.0",
+    "tiktoken>=0.8.0",
+    "regex>=2024.5.15",
+    "tqdm>=4.66.0",
+]
+
+[project.scripts]
+zhprep = "src.corpus.preprocess:main"
+zhtrain = "src.tokenizer.train:main"
+zhbench = "eval.benchmark:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,20 @@
+# 数据与产物（大文件不入库）
+data/
+artifacts/
+
+# 便携运行时（不入库）
+tools/python/
+tools/get-pip.py
+.pipcache/
+.tmp/
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+
+# 系统
+.DS_Store
+Thumbs.db

@@ -1,0 +1,848 @@
+{
+  "samples": {
+    "古诗": {
+      "chars": 98,
+      "categories": {
+        "group_a_64k": {
+          "chars": 80,
+          "tokens": 89,
+          "tokens_per_char": 1.1125,
+          "chars_per_token": 0.8989,
+          "char_atomicity": 1.0,
+          "bits_per_char": 17.7619,
+          "radical_recoverability": 1.0
+        },
+        "group_a_32k": {
+          "chars": 80,
+          "tokens": 95,
+          "tokens_per_char": 1.1875,
+          "chars_per_token": 0.8421,
+          "char_atomicity": 1.0,
+          "bits_per_char": 17.7719,
+          "radical_recoverability": 1.0
+        },
+        "gpt-4o (o200k_base)": {
+          "chars": 80,
+          "tokens": 103,
+          "tokens_per_char": 1.2875,
+          "chars_per_token": 0.7767,
+          "char_atomicity": 0.8875,
+          "bits_per_char": 22.6726,
+          "radical_recoverability": 0.8875
+        },
+        "gpt-3.5 (cl100k_base)": {
+          "chars": 80,
+          "tokens": 141,
+          "tokens_per_char": 1.7625,
+          "chars_per_token": 0.5674,
+          "char_atomicity": 0.5125,
+          "bits_per_char": 29.2815,
+          "radical_recoverability": 0.5125
+        },
+        "Qwen2.5-7B": {
+          "chars": 80,
+          "tokens": 90,
+          "tokens_per_char": 1.125,
+          "chars_per_token": 0.8889,
+          "char_atomicity": 1.0,
+          "bits_per_char": 19.3618,
+          "radical_recoverability": 1.0
+        },
+        "DeepSeek-V3": {
+          "chars": 80,
+          "tokens": 82,
+          "tokens_per_char": 1.025,
+          "chars_per_token": 0.9756,
+          "char_atomicity": 0.9875,
+          "bits_per_char": 17.3993,
+          "radical_recoverability": 0.9875
+        },
+        "Yi-6B": {
+          "chars": 80,
+          "tokens": 92,
+          "tokens_per_char": 1.15,
+          "chars_per_token": 0.8696,
+          "char_atomicity": 0.9625,
+          "bits_per_char": 18.3607,
+          "radical_recoverability": 0.9625
+        },
+        "ChatGLM3-6B": {
+          "chars": 80,
+          "tokens": 86,
+          "tokens_per_char": 1.075,
+          "chars_per_token": 0.9302,
+          "char_atomicity": 1.0,
+          "bits_per_char": 17.1822,
+          "radical_recoverability": 1.0
+        }
+      }
+    },
+    "技术文档": {
+      "chars": 177,
+      "categories": {
+        "group_a_64k": {
+          "chars": 165,
+          "tokens": 119,
+          "tokens_per_char": 0.7212,
+          "chars_per_token": 1.3866,
+          "char_atomicity": 1.0,
+          "bits_per_char": 11.5147,
+          "radical_recoverability": 1.0
+        },
+        "group_a_32k": {
+          "chars": 165,
+          "tokens": 131,
+          "tokens_per_char": 0.7939,
+          "chars_per_token": 1.2595,
+          "char_atomicity": 1.0,
+          "bits_per_char": 11.8819,
+          "radical_recoverability": 1.0
+        },
+        "gpt-4o (o200k_base)": {
+          "chars": 165,
+          "tokens": 143,
+          "tokens_per_char": 0.8667,
+          "chars_per_token": 1.1538,
+          "char_atomicity": 0.9879,
+          "bits_per_char": 15.2618,
+          "radical_recoverability": 0.9879
+        },
+        "gpt-3.5 (cl100k_base)": {
+          "chars": 165,
+          "tokens": 195,
+          "tokens_per_char": 1.1818,
+          "chars_per_token": 0.8462,
+          "char_atomicity": 0.8727,
+          "bits_per_char": 19.6343,
+          "radical_recoverability": 0.8727
+        },
+        "Qwen2.5-7B": {
+          "chars": 165,
+          "tokens": 120,
+          "tokens_per_char": 0.7273,
+          "chars_per_token": 1.375,
+          "char_atomicity": 1.0,
+          "bits_per_char": 12.5167,
+          "radical_recoverability": 1.0
+        },
+        "DeepSeek-V3": {
+          "chars": 165,
+          "tokens": 112,
+          "tokens_per_char": 0.6788,
+          "chars_per_token": 1.4732,
+          "char_atomicity": 1.0,
+          "bits_per_char": 11.5224,
+          "radical_recoverability": 1.0
+        },
+        "Yi-6B": {
+          "chars": 165,
+          "tokens": 119,
+          "tokens_per_char": 0.7212,
+          "chars_per_token": 1.3866,
+          "char_atomicity": 1.0,
+          "bits_per_char": 11.5147,
+          "radical_recoverability": 1.0
+        },
+        "ChatGLM3-6B": {
+          "chars": 165,
+          "tokens": 121,
+          "tokens_per_char": 0.7333,
+          "chars_per_token": 1.3636,
+          "char_atomicity": 1.0,
+          "bits_per_char": 11.7212,
+          "radical_recoverability": 1.0
+        }
+      }
+    },
+    "文言文": {
+      "chars": 103,
+      "categories": {
+        "group_a_64k": {
+          "chars": 86,
+          "tokens": 92,
+          "tokens_per_char": 1.0698,
+          "chars_per_token": 0.9348,
+          "char_atomicity": 1.0,
+          "bits_per_char": 17.0797,
+          "radical_recoverability": 1.0
+        },
+        "group_a_32k": {
+          "chars": 86,
+          "tokens": 97,
+          "tokens_per_char": 1.1279,
+          "chars_per_token": 0.8866,
+          "char_atomicity": 1.0,
+          "bits_per_char": 16.88,
+          "radical_recoverability": 1.0
+        },
+        "gpt-4o (o200k_base)": {
+          "chars": 86,
+          "tokens": 99,
+          "tokens_per_char": 1.1512,
+          "chars_per_token": 0.8687,
+          "char_atomicity": 0.9535,
+          "bits_per_char": 20.2717,
+          "radical_recoverability": 0.9535
+        },
+        "gpt-3.5 (cl100k_base)": {
+          "chars": 86,
+          "tokens": 125,
+          "tokens_per_char": 1.4535,
+          "chars_per_token": 0.688,
+          "char_atomicity": 0.7326,
+          "bits_per_char": 24.1477,
+          "radical_recoverability": 0.7326
+        },
+        "Qwen2.5-7B": {
+          "chars": 86,
+          "tokens": 93,
+          "tokens_per_char": 1.0814,
+          "chars_per_token": 0.9247,
+          "char_atomicity": 1.0,
+          "bits_per_char": 18.6114,
+          "radical_recoverability": 1.0
+        },
+        "DeepSeek-V3": {
+          "chars": 86,
+          "tokens": 87,
+          "tokens_per_char": 1.0116,
+          "chars_per_token": 0.9885,
+          "char_atomicity": 0.9884,
+          "bits_per_char": 17.1723,
+          "radical_recoverability": 0.9884
+        },
+        "Yi-6B": {
+          "chars": 86,
+          "tokens": 92,
+          "tokens_per_char": 1.0698,
+          "chars_per_token": 0.9348,
+          "char_atomicity": 0.9767,
+          "bits_per_char": 17.0797,
+          "radical_recoverability": 0.9767
+        },
+        "ChatGLM3-6B": {
+          "chars": 86,
+          "tokens": 88,
+          "tokens_per_char": 1.0233,
+          "chars_per_token": 0.9773,
+          "char_atomicity": 1.0,
+          "bits_per_char": 16.3552,
+          "radical_recoverability": 1.0
+        }
+      }
+    },
+    "新闻": {
+      "chars": 142,
+      "categories": {
+        "group_a_64k": {
+          "chars": 131,
+          "tokens": 84,
+          "tokens_per_char": 0.6412,
+          "chars_per_token": 1.5595,
+          "char_atomicity": 1.0,
+          "bits_per_char": 10.2376,
+          "radical_recoverability": 1.0
+        },
+        "group_a_32k": {
+          "chars": 131,
+          "tokens": 94,
+          "tokens_per_char": 0.7176,
+          "chars_per_token": 1.3936,
+          "char_atomicity": 1.0,
+          "bits_per_char": 10.7388,
+          "radical_recoverability": 1.0
+        },
+        "gpt-4o (o200k_base)": {
+          "chars": 131,
+          "tokens": 96,
+          "tokens_per_char": 0.7328,
+          "chars_per_token": 1.3646,
+          "char_atomicity": 1.0,
+          "bits_per_char": 12.9049,
+          "radical_recoverability": 1.0
+        },
+        "gpt-3.5 (cl100k_base)": {
+          "chars": 131,
+          "tokens": 172,
+          "tokens_per_char": 1.313,
+          "chars_per_token": 0.7616,
+          "char_atomicity": 0.7481,
+          "bits_per_char": 21.8133,
+          "radical_recoverability": 0.7481
+        },
+        "Qwen2.5-7B": {
+          "chars": 131,
+          "tokens": 74,
+          "tokens_per_char": 0.5649,
+          "chars_per_token": 1.7703,
+          "char_atomicity": 1.0,
+          "bits_per_char": 9.722,
+          "radical_recoverability": 1.0
+        },
+        "DeepSeek-V3": {
+          "chars": 131,
+          "tokens": 66,
+          "tokens_per_char": 0.5038,
+          "chars_per_token": 1.9848,
+          "char_atomicity": 1.0,
+          "bits_per_char": 8.5523,
+          "radical_recoverability": 1.0
+        },
+        "Yi-6B": {
+          "chars": 131,
+          "tokens": 70,
+          "tokens_per_char": 0.5344,
+          "chars_per_token": 1.8714,
+          "char_atomicity": 1.0,
+          "bits_per_char": 8.5313,
+          "radical_recoverability": 1.0
+        },
+        "ChatGLM3-6B": {
+          "chars": 131,
+          "tokens": 69,
+          "tokens_per_char": 0.5267,
+          "chars_per_token": 1.8986,
+          "char_atomicity": 1.0,
+          "bits_per_char": 8.4188,
+          "radical_recoverability": 1.0
+        }
+      }
+    },
+    "混合中英": {
+      "chars": 180,
+      "categories": {
+        "group_a_64k": {
+          "chars": 61,
+          "tokens": 102,
+          "tokens_per_char": 1.6721,
+          "chars_per_token": 0.598,
+          "char_atomicity": 1.0,
+          "bits_per_char": 26.6969,
+          "radical_recoverability": 1.0
+        },
+        "group_a_32k": {
+          "chars": 61,
+          "tokens": 116,
+          "tokens_per_char": 1.9016,
+          "chars_per_token": 0.5259,
+          "char_atomicity": 1.0,
+          "bits_per_char": 28.4595,
+          "radical_recoverability": 1.0
+        },
+        "gpt-4o (o200k_base)": {
+          "chars": 61,
+          "tokens": 81,
+          "tokens_per_char": 1.3279,
+          "chars_per_token": 0.7531,
+          "char_atomicity": 0.9672,
+          "bits_per_char": 23.3835,
+          "radical_recoverability": 0.9672
+        },
+        "gpt-3.5 (cl100k_base)": {
+          "chars": 61,
+          "tokens": 105,
+          "tokens_per_char": 1.7213,
+          "chars_per_token": 0.581,
+          "char_atomicity": 0.8525,
+          "bits_per_char": 28.5972,
+          "radical_recoverability": 0.8525
+        },
+        "Qwen2.5-7B": {
+          "chars": 61,
+          "tokens": 84,
+          "tokens_per_char": 1.377,
+          "chars_per_token": 0.7262,
+          "char_atomicity": 0.9508,
+          "bits_per_char": 23.6997,
+          "radical_recoverability": 0.9508
+        },
+        "DeepSeek-V3": {
+          "chars": 61,
+          "tokens": 77,
+          "tokens_per_char": 1.2623,
+          "chars_per_token": 0.7922,
+          "char_atomicity": 1.0,
+          "bits_per_char": 21.4274,
+          "radical_recoverability": 1.0
+        },
+        "Yi-6B": {
+          "chars": 61,
+          "tokens": 80,
+          "tokens_per_char": 1.3115,
+          "chars_per_token": 0.7625,
+          "char_atomicity": 1.0,
+          "bits_per_char": 20.9387,
+          "radical_recoverability": 1.0
+        },
+        "ChatGLM3-6B": {
+          "chars": 61,
+          "tokens": 85,
+          "tokens_per_char": 1.3934,
+          "chars_per_token": 0.7176,
+          "char_atomicity": 1.0,
+          "bits_per_char": 22.272,
+          "radical_recoverability": 1.0
+        }
+      }
+    },
+    "现代汉语": {
+      "chars": 153,
+      "categories": {
+        "group_a_64k": {
+          "chars": 143,
+          "tokens": 81,
+          "tokens_per_char": 0.5664,
+          "chars_per_token": 1.7654,
+          "char_atomicity": 1.0,
+          "bits_per_char": 9.0436,
+          "radical_recoverability": 1.0
+        },
+        "group_a_32k": {
+          "chars": 143,
+          "tokens": 94,
+          "tokens_per_char": 0.6573,
+          "chars_per_token": 1.5213,
+          "char_atomicity": 1.0,
+          "bits_per_char": 9.8376,
+          "radical_recoverability": 1.0
+        },
+        "gpt-4o (o200k_base)": {
+          "chars": 143,
+          "tokens": 102,
+          "tokens_per_char": 0.7133,
+          "chars_per_token": 1.402,
+          "char_atomicity": 0.993,
+          "bits_per_char": 12.5608,
+          "radical_recoverability": 0.993
+        },
+        "gpt-3.5 (cl100k_base)": {
+          "chars": 143,
+          "tokens": 179,
+          "tokens_per_char": 1.2517,
+          "chars_per_token": 0.7989,
+          "char_atomicity": 0.7902,
+          "bits_per_char": 20.7961,
+          "radical_recoverability": 0.7902
+        },
+        "Qwen2.5-7B": {
+          "chars": 143,
+          "tokens": 74,
+          "tokens_per_char": 0.5175,
+          "chars_per_token": 1.9324,
+          "char_atomicity": 1.0,
+          "bits_per_char": 8.9061,
+          "radical_recoverability": 1.0
+        },
+        "DeepSeek-V3": {
+          "chars": 143,
+          "tokens": 72,
+          "tokens_per_char": 0.5035,
+          "chars_per_token": 1.9861,
+          "char_atomicity": 1.0,
+          "bits_per_char": 8.5468,
+          "radical_recoverability": 1.0
+        },
+        "Yi-6B": {
+          "chars": 143,
+          "tokens": 76,
+          "tokens_per_char": 0.5315,
+          "chars_per_token": 1.8816,
+          "char_atomicity": 0.993,
+          "bits_per_char": 8.4853,
+          "radical_recoverability": 0.993
+        },
+        "ChatGLM3-6B": {
+          "chars": 143,
+          "tokens": 74,
+          "tokens_per_char": 0.5175,
+          "chars_per_token": 1.9324,
+          "char_atomicity": 1.0,
+          "bits_per_char": 8.2712,
+          "radical_recoverability": 1.0
+        }
+      }
+    },
+    "生僻字压力": {
+      "chars": 78,
+      "categories": {
+        "group_a_64k": {
+          "chars": 69,
+          "tokens": 69,
+          "tokens_per_char": 1.0,
+          "chars_per_token": 1.0,
+          "char_atomicity": 1.0,
+          "bits_per_char": 15.9658,
+          "radical_recoverability": 1.0
+        },
+        "group_a_32k": {
+          "chars": 69,
+          "tokens": 68,
+          "tokens_per_char": 0.9855,
+          "chars_per_token": 1.0147,
+          "char_atomicity": 1.0,
+          "bits_per_char": 14.7489,
+          "radical_recoverability": 1.0
+        },
+        "gpt-4o (o200k_base)": {
+          "chars": 69,
+          "tokens": 117,
+          "tokens_per_char": 1.6957,
+          "chars_per_token": 0.5897,
+          "char_atomicity": 0.4203,
+          "bits_per_char": 29.8601,
+          "radical_recoverability": 0.4203
+        },
+        "gpt-3.5 (cl100k_base)": {
+          "chars": 69,
+          "tokens": 144,
+          "tokens_per_char": 2.087,
+          "chars_per_token": 0.4792,
+          "char_atomicity": 0.3478,
+          "bits_per_char": 34.6719,
+          "radical_recoverability": 0.3478
+        },
+        "Qwen2.5-7B": {
+          "chars": 69,
+          "tokens": 99,
+          "tokens_per_char": 1.4348,
+          "chars_per_token": 0.697,
+          "char_atomicity": 0.6087,
+          "bits_per_char": 24.6934,
+          "radical_recoverability": 0.6087
+        },
+        "DeepSeek-V3": {
+          "chars": 69,
+          "tokens": 106,
+          "tokens_per_char": 1.5362,
+          "chars_per_token": 0.6509,
+          "char_atomicity": 0.4638,
+          "bits_per_char": 26.0774,
+          "radical_recoverability": 0.4638
+        },
+        "Yi-6B": {
+          "chars": 69,
+          "tokens": 147,
+          "tokens_per_char": 2.1304,
+          "chars_per_token": 0.4694,
+          "char_atomicity": 0.4493,
+          "bits_per_char": 34.0141,
+          "radical_recoverability": 0.4493
+        },
+        "ChatGLM3-6B": {
+          "chars": 69,
+          "tokens": 126,
+          "tokens_per_char": 1.8261,
+          "chars_per_token": 0.5476,
+          "char_atomicity": 0.6087,
+          "bits_per_char": 29.1872,
+          "radical_recoverability": 0.6087
+        }
+      }
+    },
+    "百科": {
+      "chars": 131,
+      "categories": {
+        "group_a_64k": {
+          "chars": 121,
+          "tokens": 69,
+          "tokens_per_char": 0.5702,
+          "chars_per_token": 1.7536,
+          "char_atomicity": 1.0,
+          "bits_per_char": 9.1045,
+          "radical_recoverability": 1.0
+        },
+        "group_a_32k": {
+          "chars": 121,
+          "tokens": 85,
+          "tokens_per_char": 0.7025,
+          "chars_per_token": 1.4235,
+          "char_atomicity": 1.0,
+          "bits_per_char": 10.5132,
+          "radical_recoverability": 1.0
+        },
+        "gpt-4o (o200k_base)": {
+          "chars": 121,
+          "tokens": 109,
+          "tokens_per_char": 0.9008,
+          "chars_per_token": 1.1101,
+          "char_atomicity": 0.9669,
+          "bits_per_char": 15.8634,
+          "radical_recoverability": 0.9669
+        },
+        "gpt-3.5 (cl100k_base)": {
+          "chars": 121,
+          "tokens": 161,
+          "tokens_per_char": 1.3306,
+          "chars_per_token": 0.7516,
+          "char_atomicity": 0.7438,
+          "bits_per_char": 22.1057,
+          "radical_recoverability": 0.7438
+        },
+        "Qwen2.5-7B": {
+          "chars": 121,
+          "tokens": 86,
+          "tokens_per_char": 0.7107,
+          "chars_per_token": 1.407,
+          "char_atomicity": 1.0,
+          "bits_per_char": 12.2323,
+          "radical_recoverability": 1.0
+        },
+        "DeepSeek-V3": {
+          "chars": 121,
+          "tokens": 79,
+          "tokens_per_char": 0.6529,
+          "chars_per_token": 1.5316,
+          "char_atomicity": 0.9917,
+          "bits_per_char": 11.0828,
+          "radical_recoverability": 0.9917
+        },
+        "Yi-6B": {
+          "chars": 121,
+          "tokens": 86,
+          "tokens_per_char": 0.7107,
+          "chars_per_token": 1.407,
+          "char_atomicity": 0.9835,
+          "bits_per_char": 11.3476,
+          "radical_recoverability": 0.9835
+        },
+        "ChatGLM3-6B": {
+          "chars": 121,
+          "tokens": 81,
+          "tokens_per_char": 0.6694,
+          "chars_per_token": 1.4938,
+          "char_atomicity": 1.0,
+          "bits_per_char": 10.6997,
+          "radical_recoverability": 1.0
+        }
+      }
+    },
+    "网络用语": {
+      "chars": 94,
+      "categories": {
+        "group_a_64k": {
+          "chars": 76,
+          "tokens": 80,
+          "tokens_per_char": 1.0526,
+          "chars_per_token": 0.95,
+          "char_atomicity": 1.0,
+          "bits_per_char": 16.8061,
+          "radical_recoverability": 1.0
+        },
+        "group_a_32k": {
+          "chars": 76,
+          "tokens": 83,
+          "tokens_per_char": 1.0921,
+          "chars_per_token": 0.9157,
+          "char_atomicity": 1.0,
+          "bits_per_char": 16.3442,
+          "radical_recoverability": 1.0
+        },
+        "gpt-4o (o200k_base)": {
+          "chars": 76,
+          "tokens": 82,
+          "tokens_per_char": 1.0789,
+          "chars_per_token": 0.9268,
+          "char_atomicity": 0.9605,
+          "bits_per_char": 19.0,
+          "radical_recoverability": 0.9605
+        },
+        "gpt-3.5 (cl100k_base)": {
+          "chars": 76,
+          "tokens": 125,
+          "tokens_per_char": 1.6447,
+          "chars_per_token": 0.608,
+          "char_atomicity": 0.6053,
+          "bits_per_char": 27.3251,
+          "radical_recoverability": 0.6053
+        },
+        "Qwen2.5-7B": {
+          "chars": 76,
+          "tokens": 76,
+          "tokens_per_char": 1.0,
+          "chars_per_token": 1.0,
+          "char_atomicity": 0.9868,
+          "bits_per_char": 17.2105,
+          "radical_recoverability": 0.9868
+        },
+        "DeepSeek-V3": {
+          "chars": 76,
+          "tokens": 71,
+          "tokens_per_char": 0.9342,
+          "chars_per_token": 1.0704,
+          "char_atomicity": 1.0,
+          "bits_per_char": 15.8582,
+          "radical_recoverability": 1.0
+        },
+        "Yi-6B": {
+          "chars": 76,
+          "tokens": 72,
+          "tokens_per_char": 0.9474,
+          "chars_per_token": 1.0556,
+          "char_atomicity": 1.0,
+          "bits_per_char": 15.1255,
+          "radical_recoverability": 1.0
+        },
+        "ChatGLM3-6B": {
+          "chars": 76,
+          "tokens": 73,
+          "tokens_per_char": 0.9605,
+          "chars_per_token": 1.0411,
+          "char_atomicity": 1.0,
+          "bits_per_char": 15.3525,
+          "radical_recoverability": 1.0
+        }
+      }
+    },
+    "诗歌": {
+      "chars": 101,
+      "categories": {
+        "group_a_64k": {
+          "chars": 81,
+          "tokens": 93,
+          "tokens_per_char": 1.1481,
+          "chars_per_token": 0.871,
+          "char_atomicity": 1.0,
+          "bits_per_char": 18.3311,
+          "radical_recoverability": 1.0
+        },
+        "group_a_32k": {
+          "chars": 81,
+          "tokens": 97,
+          "tokens_per_char": 1.1975,
+          "chars_per_token": 0.8351,
+          "char_atomicity": 1.0,
+          "bits_per_char": 17.922,
+          "radical_recoverability": 1.0
+        },
+        "gpt-4o (o200k_base)": {
+          "chars": 81,
+          "tokens": 117,
+          "tokens_per_char": 1.4444,
+          "chars_per_token": 0.6923,
+          "char_atomicity": 0.7037,
+          "bits_per_char": 25.4363,
+          "radical_recoverability": 0.7037
+        },
+        "gpt-3.5 (cl100k_base)": {
+          "chars": 81,
+          "tokens": 145,
+          "tokens_per_char": 1.7901,
+          "chars_per_token": 0.5586,
+          "char_atomicity": 0.4938,
+          "bits_per_char": 29.7405,
+          "radical_recoverability": 0.4938
+        },
+        "Qwen2.5-7B": {
+          "chars": 81,
+          "tokens": 92,
+          "tokens_per_char": 1.1358,
+          "chars_per_token": 0.8804,
+          "char_atomicity": 1.0,
+          "bits_per_char": 19.5478,
+          "radical_recoverability": 1.0
+        },
+        "DeepSeek-V3": {
+          "chars": 81,
+          "tokens": 104,
+          "tokens_per_char": 1.284,
+          "chars_per_token": 0.7788,
+          "char_atomicity": 0.8519,
+          "bits_per_char": 21.795,
+          "radical_recoverability": 0.8519
+        },
+        "Yi-6B": {
+          "chars": 81,
+          "tokens": 122,
+          "tokens_per_char": 1.5062,
+          "chars_per_token": 0.6639,
+          "char_atomicity": 0.8148,
+          "bits_per_char": 24.0472,
+          "radical_recoverability": 0.8148
+        },
+        "ChatGLM3-6B": {
+          "chars": 81,
+          "tokens": 93,
+          "tokens_per_char": 1.1481,
+          "chars_per_token": 0.871,
+          "char_atomicity": 1.0,
+          "bits_per_char": 18.3514,
+          "radical_recoverability": 1.0
+        }
+      }
+    }
+  },
+  "tokenizers": {
+    "group_a_64k": {
+      "chars": 101.3,
+      "tokens": 87.8,
+      "tokens_per_char": 0.9554,
+      "chars_per_token": 1.1718,
+      "char_atomicity": 1.0,
+      "bits_per_char": 15.2542,
+      "radical_recoverability": 1.0
+    },
+    "group_a_32k": {
+      "chars": 101.3,
+      "tokens": 96.0,
+      "tokens_per_char": 1.0363,
+      "chars_per_token": 1.0618,
+      "char_atomicity": 1.0,
+      "bits_per_char": 15.5098,
+      "radical_recoverability": 1.0
+    },
+    "gpt-4o (o200k_base)": {
+      "chars": 101.3,
+      "tokens": 104.9,
+      "tokens_per_char": 1.1199,
+      "chars_per_token": 0.9638,
+      "char_atomicity": 0.8841,
+      "bits_per_char": 19.7215,
+      "radical_recoverability": 0.8841
+    },
+    "gpt-3.5 (cl100k_base)": {
+      "chars": 101.3,
+      "tokens": 149.2,
+      "tokens_per_char": 1.5536,
+      "chars_per_token": 0.664,
+      "char_atomicity": 0.6699,
+      "bits_per_char": 25.8113,
+      "radical_recoverability": 0.6699
+    },
+    "Qwen2.5-7B": {
+      "chars": 101.3,
+      "tokens": 88.8,
+      "tokens_per_char": 0.9674,
+      "chars_per_token": 1.1602,
+      "char_atomicity": 0.9546,
+      "bits_per_char": 16.6502,
+      "radical_recoverability": 0.9546
+    },
+    "DeepSeek-V3": {
+      "chars": 101.3,
+      "tokens": 85.6,
+      "tokens_per_char": 0.9392,
+      "chars_per_token": 1.2232,
+      "char_atomicity": 0.9283,
+      "bits_per_char": 15.9434,
+      "radical_recoverability": 0.9283
+    },
+    "Yi-6B": {
+      "chars": 101.3,
+      "tokens": 95.6,
+      "tokens_per_char": 1.0613,
+      "chars_per_token": 1.1302,
+      "char_atomicity": 0.918,
+      "bits_per_char": 16.9445,
+      "radical_recoverability": 0.918
+    },
+    "ChatGLM3-6B": {
+      "chars": 101.3,
+      "tokens": 89.6,
+      "tokens_per_char": 0.9873,
+      "chars_per_token": 1.1773,
+      "char_atomicity": 0.9609,
+      "bits_per_char": 15.7811,
+      "radical_recoverability": 0.9609
+    }
+  }
+}

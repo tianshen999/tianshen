@@ -1,0 +1,11 @@
+# 中文原生分词器 依赖
+# 核心训练与分词
+sentencepiece>=0.2.0
+tokenizers>=0.20.0
+# 参考词表（GPT 系）
+tiktoken>=0.8.0
+# 文本处理
+regex>=2024.5.15
+tqdm>=4.66.0
+# 测试
+pytest>=8.0.0
